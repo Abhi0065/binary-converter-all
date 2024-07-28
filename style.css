@@ -25,6 +25,8 @@ input[type="checkbox"] {
   border-radius: 5px;
   width: 39px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   z-index: 2;
 }
 
@@ -96,6 +98,8 @@ input[type="checkbox"] {
   cursor: pointer;
   font-size: 17px;
   box-shadow: 0 2px 3px #b1b0b0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: all 0.3s ease;
 }
 
