@@ -46,10 +46,10 @@ function extractBinary(n) {
 function decimalToBinary() {
   const value = input1.value;
   const nums = parseInt(Number(value));
-  input.value = value;
+  input1.value = value;
   if (nums > 10000000) {
     alert("Allowed numbers between 0 to 100000");
-    input.value = value.toString().slice(0, -1);
+    input1.value = value.toString().slice(0, -1);
     return;
   }
 
@@ -94,7 +94,9 @@ function binaryToDecimal() {
     <div class="number">${extractDecimal(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>2</sub> = (${extractDecimal(nums)})<sub>10</sub></p>
+    <p>(${nums.join("")})<sub>2</sub> = (${extractDecimal(
+        nums
+      )})<sub>10</sub></p>
     </div>`;
     }
   } else {
@@ -141,7 +143,7 @@ function decimalToOcta() {
     <div class="number">${extractOcta(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>8</sub> = (${extractOcta(nums)})<sub>10</sub></p>
+    <p>(${nums})<sub>8</sub> = (${extractOcta(nums)})<sub>10</sub></p>
     </div>`;
   } else {
     result3.innerHTML = "";
@@ -176,7 +178,9 @@ function octaToDecimal() {
     <div class="number">${extractOctaDecimal(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>8</sub> = (${extractOctaDecimal(nums)})<sub>10</sub></p>
+    <p>(${nums.join("")})<sub>8</sub> = (${extractOctaDecimal(
+        nums
+      )})<sub>10</sub></p>
     </div>`;
     }
   } else {
@@ -224,7 +228,7 @@ function decimalToHexa() {
     <div class="number">${extractHexa(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>10</sub> = (${extractHexa(nums)})<sub>16</sub></p>
+    <p>(${nums})<sub>10</sub> = (${extractHexa(nums)})<sub>16</sub></p>
     </div>`;
   } else {
     result6.innerHTML = "";
@@ -259,7 +263,9 @@ function HexaToDecimal() {
     <div class="number">${extractHexaDecimal(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>16</sub> = (${extractHexaDecimal(nums)})<sub>10</sub></p>
+    <p>(${nums.join("")})<sub>16</sub> = (${extractHexaDecimal(
+        nums
+      )})<sub>10</sub></p>
     </div>`;
     }
   } else {
@@ -289,7 +295,9 @@ function octaToHexa() {
     <div class="number">${extractOctaToHexa(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>8</sub> = (${extractOctaToHexa(nums)})<sub>16</sub></p>
+    <p>(${nums.join("")})<sub>8</sub> = (${extractOctaToHexa(
+        nums
+      )})<sub>16</sub></p>
     </div>`;
     }
   } else {
@@ -319,7 +327,9 @@ function HexaToOcta() {
     <div class="number">${extractHexaToOcta(nums)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>16</sub> = (${extractHexaToOcta(nums)})<sub>8</sub></p>
+    <p>(${nums.join("")})<sub>16</sub> = (${extractHexaToOcta(
+        nums
+      )})<sub>8</sub></p>
     </div>`;
     }
   } else {
@@ -345,7 +355,9 @@ function binaryToOcta() {
     <div class="number">${extractOcta(decimalValue)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>2</sub> = (${extractOcta(decimalValue)})<sub>8</sub></p>
+    <p>(${nums.join("")})<sub>2</sub> = (${extractOcta(
+        decimalValue
+      )})<sub>8</sub></p>
     </div>`;
     }
   } else {
@@ -371,7 +383,9 @@ function octaToBinary() {
     <div class="number">${extractBinary(decimalValue)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>8</sub> = (${extractBinary(decimalValue)})<sub>2</sub></p>
+    <p>(${nums.join("")})<sub>8</sub> = (${extractBinary(
+        decimalValue
+      )})<sub>2</sub></p>
     </div>`;
     }
   } else {
@@ -397,7 +411,9 @@ function binaryToHexa() {
     <div class="number">${extractHexa(decimalValue)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>2</sub> = (${extractHexa(decimalValue)})<sub>16</sub></p>
+    <p>(${nums.join("")})<sub>2</sub> = (${extractHexa(
+        decimalValue
+      )})<sub>16</sub></p>
     </div>`;
     }
   } else {
@@ -423,7 +439,7 @@ function HexaToBinary() {
     <div class="number">${extractBinary(decimalValue)}</div>
     <div class="base">
     <p class="head">Conversion in base</p>
-    <p>(${value})<sub>16</sub> = (${extractBinary(
+    <p>(${nums.join("")})<sub>16</sub> = (${extractBinary(
         decimalValue
       )})<sub>2</sub></p>
     </div>`;
