@@ -119,7 +119,7 @@ input[type="checkbox"] {
 
 .main .close-x {
   position: absolute;
-  top: 0.1rem;
+  top: 0.2rem;
   right: 1.5%;
   color: #000;
   font-size: 32px;
