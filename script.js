@@ -500,10 +500,12 @@ menu.addEventListener("click", (event) => {
   document.addEventListener("click", removeLinks);
   flag++;
   if (flag === 1) {
+    hideApk.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300 });
     hideApk.style.display = "none";
     link.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200 });
     link.style.background = getRandomAttractiveGradient();
   } else {
+    hideApk.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300 });
     hideApk.style.display = "block";
     flag = 0;
   }
