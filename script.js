@@ -459,6 +459,8 @@ const link = document.querySelector(".links");
 const links = document.querySelectorAll(".link-option");
 const mains = document.querySelectorAll(".main");
 const allInput = document.querySelectorAll(".input");
+const apkCon = document.querySelector(".apk");
+const hideApk = document.getElementById("hide-apk");
 
 allInput.forEach((input) => {
   const closeX = document.createElement("span");
@@ -498,9 +500,11 @@ menu.addEventListener("click", (event) => {
   document.addEventListener("click", removeLinks);
   flag++;
   if (flag === 1) {
+    hideApk.style.display = "none";
     link.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200 });
     link.style.background = getRandomAttractiveGradient();
   } else {
+    hideApk.style.display = "block";
     flag = 0;
   }
 });
@@ -544,9 +548,6 @@ function getRandomAttractiveGradient() {
 document.body.style.background = getRandomAttractiveGradient();
 link.style.background = getRandomAttractiveGradient();
 
-const apkCon = document.querySelector(".apk");
-const hideApk = document.getElementById("hide-apk");
-
 let hideFlag = 0;
 hideApk.addEventListener("click", () => {
   hideFlag++;
@@ -565,11 +566,9 @@ hideApk.addEventListener("click", () => {
     localStorage.setItem("hide", JSON.stringify(data));
     hideFlag = 0;
   }
-  console.log(hideFlag);
 });
 
 const isBanner = JSON.parse(localStorage.getItem("hide"));
-console.log(isBanner);
 
 if (isBanner) {
   apkCon.style.display = isBanner[0];
